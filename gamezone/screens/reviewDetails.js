@@ -3,8 +3,8 @@ import { StyleSheet, View, Text } from 'react-native';
 
 export default function ReviewDetails() {
   return (
-    <View >
-      <Text style={styles.container}>ReviewDetails Screen</Text>
+    <View style={styles.container}>
+      <Text>ReviewDetails Screen</Text>
     </View>
   );
 }
