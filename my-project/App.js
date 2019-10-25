@@ -20,7 +20,6 @@ export default function App() {
 
   const submitHandler = (text) => {
     if(text.length > 3){
-      setText('');
       setTodos(prevTodos => {
         return [
           { text, key: Math.random().toString() },
