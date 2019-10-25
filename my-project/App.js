@@ -18,12 +18,18 @@ export default function App() {
   };
 
   const submitHandler = (text) => {
-    setTodos(prevTodos => {
-      return [
-        { text, key: Math.random().toString() },
-        ...prevTodos
-      ];
-    });
+    if(text.length > 3){
+      setTodos(prevTodos => {
+        return [
+          { text, key: Math.random().toString() },
+          ...prevTodos
+        ];
+      });
+    } else {
+      Alert.alert('OOPS', 'Todo must be over 3 characters long', [
+        {text: 'Understood', onPress: () => console.log('alert closed') }
+      ]);
+    }
   };
 
   return (
